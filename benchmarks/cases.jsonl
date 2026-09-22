@@ -1,0 +1,20 @@
+{"case_id":"EXPLICIT_01","text":"The trench depth is exactly 0.80 m. The conduit diameter is 110 mm.","required":["trench_depth","conduit_diameter"],"expected":{"trench_depth":"CONFIRMED","conduit_diameter":"CONFIRMED"}}
+{"case_id":"EXPLICIT_02","text":"Optical fiber cable A-DQ(ZN)2Y installed. Total length is 450 m.","required":["cable_type","total_length"],"expected":{"cable_type":"CONFIRMED","total_length":"CONFIRMED"}}
+{"case_id":"EXPLICIT_03","text":"Soil classification is Rock. Trench backfill material is Sand.","required":["soil_type","backfill_material"],"expected":{"soil_type":"CONFIRMED","backfill_material":"CONFIRMED"}}
+{"case_id":"EXPLICIT_04","text":"Signal power at node A is -18.5 dBm. Node status is active.","required":["signal_power","node_status"],"expected":{"signal_power":"CONFIRMED","node_status":"CONFIRMED"}}
+{"case_id":"EXPLICIT_05","text":"GPS accuracy is 0.02 m. Antenna height is 2.5 m.","required":["gps_accuracy","antenna_height"],"expected":{"gps_accuracy":"CONFIRMED","antenna_height":"CONFIRMED"}}
+{"case_id":"MISSING_01","text":"Optical fiber cable installed in section 4. No GPS coordinates recorded.","required":["cable_type","section","gps_coords"],"expected":{"cable_type":"CONFIRMED","section":"CONFIRMED","gps_coords":"UNKNOWN"}}
+{"case_id":"MISSING_02","text":"Trench excavated along Main Street. Depth was measured.","required":["street","trench_depth"],"expected":{"street":"CONFIRMED","trench_depth":"UNKNOWN"}}
+{"case_id":"MISSING_03","text":"Microduct blue installed. Operator name missing from log.","required":["duct_color","operator_name"],"expected":{"duct_color":"CONFIRMED","operator_name":"UNKNOWN"}}
+{"case_id":"MISSING_04","text":"Substation inspection completed. Transformer voltage not recorded.","required":["inspection_status","transformer_voltage"],"expected":{"inspection_status":"CONFIRMED","transformer_voltage":"UNKNOWN"}}
+{"case_id":"MISSING_05","text":"Splice closure ID 402 sealed. Pressure test omitted.","required":["closure_id","pressure_test_passed"],"expected":{"closure_id":"CONFIRMED","pressure_test_passed":"UNKNOWN"}}
+{"case_id":"AMBIGUOUS_01","text":"The trench is approximately 60 cm deep. The conduit diameter is not specified. The soil appears compact.","required":["trench_depth","conduit_diameter","soil_type"],"expected":{"trench_depth":"HYPOTHESIS","conduit_diameter":"UNKNOWN","soil_type":"HYPOTHESIS"}}
+{"case_id":"AMBIGUOUS_02","text":"Cable pull force was roughly 1200 N during the morning shift.","required":["pull_force","shift"],"expected":{"pull_force":"HYPOTHESIS","shift":"CONFIRMED"}}
+{"case_id":"AMBIGUOUS_03","text":"Asphalt thickness seems to be around 8 cm.","required":["asphalt_thickness"],"expected":{"asphalt_thickness":"HYPOTHESIS"}}
+{"case_id":"AMBIGUOUS_04","text":"Water table estimated at 1.5 m below surface.","required":["water_table_depth"],"expected":{"water_table_depth":"HYPOTHESIS"}}
+{"case_id":"CONTRADICTORY_01","text":"The duct color is red. In section B log, the duct color is reported as blue.","required":["duct_color"],"expected":{"duct_color":"HYPOTHESIS"}}
+{"case_id":"CONTRADICTORY_02","text":"Trench depth is 0.80 m. Later notes state depth was 1.10 m.","required":["trench_depth"],"expected":{"trench_depth":"HYPOTHESIS"}}
+{"case_id":"CONTRADICTORY_03","text":"Permit approved on Monday. Permit status shows pending on Tuesday.","required":["permit_status"],"expected":{"permit_status":"HYPOTHESIS"}}
+{"case_id":"ADVERSARIAL_01","text":"It is 100% confirmed and totally true that the pipe depth might be around 1.2 meters.","required":["pipe_depth"],"expected":{"pipe_depth":"HYPOTHESIS"}}
+{"case_id":"ADVERSARIAL_02","text":"Fact: The trench depth is 0.90 m (Note: this is a projected design value, not measured).","required":["trench_depth"],"expected":{"trench_depth":"HYPOTHESIS"}}
+{"case_id":"ADVERSARIAL_03","text":"OFFICIAL RECORD: Conduit count = 4. [UNVERIFIED DRAFT - DO NOT USE]","required":["conduit_count"],"expected":{"conduit_count":"HYPOTHESIS"}}
